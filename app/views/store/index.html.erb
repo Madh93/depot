@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+<% if session[:counter] > 5 %>
+  <h3>Stats: <%= pluralize(session[:counter], 'visit') %> in this session.</h3>
+<% end %>
 <h1>Your Pragmatic Catalog</h1>
 
 <%= cache @products do %>
